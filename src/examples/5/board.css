@@ -1,0 +1,67 @@
+.board-container {
+    border-radius: 30px;
+    border: 2px solid gold;
+    background-color: brown;
+}
+
+.board {
+    width: 260px;
+    
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.5fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "F1 F2 F3 T R";
+
+    padding: 0px 5px 0px 5px;
+    margin: 0 auto;
+}
+
+div.board > div {
+    background-color: white;
+}
+
+div.board > div:first-of-type {
+    border-top-left-radius: 10px 10px;
+    border-bottom-left-radius: 10px 10px;
+}
+
+div.board > div:last-of-type {
+    border-top-right-radius: 10px 10px;
+    border-bottom-right-radius: 10px 10px;
+}
+
+div.board > div:not(:first-of-type):not(:last-of-type) {
+    border-left: 1px solid gold;
+}
+
+div.board > div:nth-last-child(2) {
+    border-right: 1px solid gold;
+}
+
+.F1 {
+    grid-area: F1;
+    text-align: center;
+}
+
+.F2 {
+    grid-area: F2;
+    text-align: center;
+}
+
+.F3 {
+    grid-area: F3;
+    text-align: center;
+}
+
+.T {
+    grid-area: T;
+    text-align: center;
+}
+
+.R {
+    grid-area: R;
+    text-align: center;
+}
