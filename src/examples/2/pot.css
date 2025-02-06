@@ -1,0 +1,36 @@
+.pot_2 {
+    font-weight: bold;
+    text-align: center;
+    margin: 0 auto;
+    height: 50px;
+    /* position: relative; */
+}
+
+.pot {
+    border-radius: 5px;
+    border: 2px solid white;
+    /* padding: 5px; */
+}
+
+.pot_2 > span {
+    color: black;
+    background-color: white;
+}
+
+.pot_2 > span.pot {
+    color: white;
+    background-color: black;
+}
+
+/* .pot_2 > span.title {
+    padding: 5px;
+} */
+
+.title {
+    border-radius: 5px;
+    border: 1px solid black;
+    border-left: 5px solid black;
+    border-right: 5px solid black;
+    padding-left: 10px;
+    padding-right: 10px;
+}
