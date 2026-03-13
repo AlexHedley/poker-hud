@@ -1,0 +1,29 @@
+/* --- */
+/* Pot */
+/* --- */
+
+.pot-hud {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #1a472a;
+    border: 2px solid #c9a84c;
+    border-radius: 6px;
+    padding: 4px 16px;
+    min-width: 100px;
+}
+
+.pot-hud .pot-label {
+    color: #c9a84c;
+    font-size: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.pot-hud .pot-amount {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+}

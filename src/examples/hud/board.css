@@ -1,0 +1,55 @@
+/* ----- */
+/* Board */
+/* ----- */
+
+.board-hud {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #1a472a;
+    border: 2px solid #c9a84c;
+    border-radius: 6px;
+    padding: 6px 10px 4px;
+}
+
+.board-hud .cards {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+}
+
+.board-hud .card {
+    width: 40px;
+    border-radius: 3px;
+}
+
+.board-hud .street-labels {
+    display: flex;
+    width: 100%;
+    margin-top: 3px;
+    gap: 4px;
+}
+
+.board-hud .label {
+    background-color: #c9a84c;
+    color: #1a1a1a;
+    font-size: 9px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    border-radius: 2px;
+    padding: 1px 0;
+    letter-spacing: 0.5px;
+}
+
+.board-hud .label.flop {
+    flex: 3;
+}
+
+.board-hud .label.turn {
+    flex: 1;
+}
+
+.board-hud .label.river {
+    flex: 1;
+}
