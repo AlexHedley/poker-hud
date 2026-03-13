@@ -1,0 +1,33 @@
+/* --- */
+/* Pot */
+/* --- */
+
+.pot-container {
+    display: inline-flex;
+    flex-direction: column;
+    background-color: #111111;
+    border: 1px solid #444444;
+    min-width: 120px;
+}
+
+.pot-label {
+    color: #cccccc;
+    font-weight: bold;
+    font-size: 11px;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #222222;
+    padding: 2px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 1px solid #444444;
+}
+
+.pot-amount {
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 4px;
+}
