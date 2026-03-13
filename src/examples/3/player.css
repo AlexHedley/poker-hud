@@ -3,22 +3,21 @@
 /* ----- ----- */
 
 .player_3 {
-    width: 200px;
-    background-color: white;
+    width: 260px;
+    background-color: #1a1a1a;
+    border-radius: 4px;
+    padding: 3px;
 }
 
 .player-container {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-auto-columns: 1fr;
-    grid-auto-rows: 1fr;
-    gap: 0px 0px;
+    grid-template-columns: 1fr 1fr 2fr 2fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 2px;
     grid-auto-flow: row;
     grid-template-areas:
-        ". Card-1 Card-2 . ."
-        ". Card-1 Card-2 . ."
-        "Name Name Name Name Bet"
+        "Card-1 Card-2 Name Bet"
+        "Num1 Num2 Owan Stack";
 }
 
 .Card-1 {
@@ -34,23 +33,72 @@
 .Name {
     grid-area: Name;
     color: white;
-    background-color: red;
-    border-radius: 5px;
-    border: 2px solid white;
+    background-color: #8b0000;
+    border-radius: 3px;
     text-align: center;
     text-transform: uppercase;
     font-weight: bold;
+    font-size: 11px;
+    align-self: center;
+    padding: 2px 0;
 }
 
 .Bet {
     grid-area: Bet;
-    /* margin: auto; */
-    /* width: 100%; */
-
-    color: black;
-    background-color: white;
-    border-radius: 5px;
-    border: 2px solid white;
+    color: white;
+    background-color: #333333;
+    border-radius: 3px;
     text-align: center;
     text-transform: uppercase;
+    font-size: 10px;
+    align-self: center;
+    padding: 2px 0;
+}
+
+.Num1 {
+    grid-area: Num1;
+    color: white;
+    background-color: #444444;
+    border-radius: 3px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 13px;
+    align-self: center;
+    padding: 2px 0;
+}
+
+.Num2 {
+    grid-area: Num2;
+    color: white;
+    background-color: #444444;
+    border-radius: 3px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 13px;
+    align-self: center;
+    padding: 2px 0;
+}
+
+.Owan {
+    grid-area: Owan;
+    color: white;
+    background-color: #333333;
+    border-radius: 3px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 10px;
+    align-self: center;
+    padding: 2px 0;
+}
+
+.Stack {
+    grid-area: Stack;
+    color: white;
+    background-color: #333333;
+    border-radius: 3px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 10px;
+    align-self: center;
+    padding: 2px 0;
 }
