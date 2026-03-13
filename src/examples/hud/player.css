@@ -4,17 +4,37 @@
 
 .player-hud {
     display: inline-grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: auto auto auto auto;
     grid-template-rows: auto auto;
     grid-template-areas:
-        "cards   name    pot-odds"
-        "cards   action  stack";
+        "photo  cards   name    pot-odds"
+        "flag   cards   action  stack";
     gap: 2px;
     background-color: #1a1a2e;
     border: 2px solid #c9a84c;
     border-radius: 6px;
     padding: 5px 8px;
     min-width: 200px;
+}
+
+.player-hud .photo {
+    grid-area: photo;
+    width: 36px;
+    height: 36px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 1px solid #c9a84c;
+    align-self: center;
+    margin-right: 4px;
+}
+
+.player-hud .flag {
+    grid-area: flag;
+    height: 14px;
+    width: auto;
+    align-self: center;
+    margin-right: 4px;
+    border: 1px solid #555;
 }
 
 .player-hud .cards {
