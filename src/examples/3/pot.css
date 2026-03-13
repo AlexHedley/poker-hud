@@ -1,19 +1,28 @@
+/* ----- ----- */
+/*   Pot 3     */
+/* ----- ----- */
+
 .pot_3 {
     font-weight: bold;
     text-align: center;
-}
-
-.pot {
-    border-radius: 5px;
-    border: 2px solid white;
+    background-color: #c85000;
+    padding: 4px 12px;
+    border-radius: 4px;
+    width: fit-content;
+    min-width: 110px;
 }
 
 .pot_3 > span {
-    color: black;
-    background-color: white;
+    color: white;
+    display: block;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .pot_3 > span.pot {
-    color: white;
-    background-color: red;
+    color: #ffd700;
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 0;
 }

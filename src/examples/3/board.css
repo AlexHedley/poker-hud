@@ -1,14 +1,27 @@
+/* ----- ----- */
+/*  Board 3    */
+/* ----- ----- */
+
 .board-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 0.5fr 0.5fr;
-    gap: 0px 0px;
+    grid-template-rows: auto auto;
+    gap: 2px;
     grid-auto-flow: row;
     grid-template-areas:
         "F1 F2 F3 T R"
         "Flop Flop Flop Turn River";
-    width: 100px;
-    color: red;
+    width: 200px;
+    background-color: darkred;
+    padding: 4px;
+    border-radius: 4px;
+}
+
+.card {
+    width: 100%;
+    max-width: 32px;
+    display: block;
+    margin: auto;
 }
 
 .F1 {
@@ -51,9 +64,11 @@
 .info {
     color: white;
     font-weight: bold;
-    background-color: red;
+    background-color: darkred;
     border-radius: 2px;
     border: 1px solid white;
     text-align: center;
     text-transform: uppercase;
+    font-size: 10px;
+    padding: 1px 0;
 }
