@@ -1,22 +1,219 @@
 <!DOCTYPE html>
-<html class="no-js" lang="">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="description" content="Poker HUD 1" />
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Poker HUD — interactive poker game display" />
 
-        <link rel="stylesheet" href="board.css" />
-        <link rel="stylesheet" href="player.css" />
-        <link rel="stylesheet" href="pot.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Rye&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet" />
 
-        <title>Poker HUD</title>
-    </head>
+    <link rel="stylesheet" href="hud.css" />
+    <title>Poker HUD</title>
+</head>
+<body>
+<div id="hud-container">
 
-    <body style="background-color: lightgray;">
-        <h1>Poker HUD</h1>
+    <!-- ===== Header ===== -->
+    <header id="hud-header">
+        <h1>🃏 Poker HUD ♥♣♦♠</h1>
+        <div id="game-info">
+            <span id="hand-number">Hand #0</span>
+            <span class="blind-info">Small Blind <strong>$25</strong></span>
+            <span class="blind-info">Big Blind <strong>$50</strong></span>
+        </div>
+    </header>
 
-        <p>Try out the examples here:</p>
-        <p>TODO</p>
+    <!-- ===== Poker Table ===== -->
+    <div id="table-wrapper">
+        <div id="poker-table">
 
-    </body>
+            <!-- ── Seat 0 — Hero (bottom-centre) ── -->
+            <div class="player-seat" id="seat-0">
+                <div class="player-badges">
+                    <span class="badge badge-dealer">D</span>
+                    <span class="badge badge-sb">SB</span>
+                    <span class="badge badge-bb">BB</span>
+                </div>
+                <div class="player-top">
+                    <img class="player-avatar" src="../../images/players/man1.svg" alt="Alice's avatar" />
+                    <div class="player-cards">
+                        <img class="hole-card" src="" alt="" />
+                        <img class="hole-card" src="" alt="" />
+                    </div>
+                </div>
+                <div class="player-info">
+                    <div class="player-name">Alice</div>
+                    <div class="player-chips">$5,000</div>
+                    <div class="player-action"></div>
+                    <div class="player-hand-result"></div>
+                </div>
+            </div>
+
+            <!-- ── Seat 1 — Bottom-left ── -->
+            <div class="player-seat" id="seat-1">
+                <div class="player-badges">
+                    <span class="badge badge-dealer">D</span>
+                    <span class="badge badge-sb">SB</span>
+                    <span class="badge badge-bb">BB</span>
+                </div>
+                <div class="player-top">
+                    <img class="player-avatar" src="../../images/players/man2.svg" alt="Bob's avatar" />
+                    <div class="player-cards">
+                        <img class="hole-card" src="" alt="" />
+                        <img class="hole-card" src="" alt="" />
+                    </div>
+                </div>
+                <div class="player-info">
+                    <div class="player-name">Bob</div>
+                    <div class="player-chips">$5,000</div>
+                    <div class="player-action"></div>
+                    <div class="player-hand-result"></div>
+                </div>
+            </div>
+
+            <!-- ── Seat 2 — Left ── -->
+            <div class="player-seat" id="seat-2">
+                <div class="player-badges">
+                    <span class="badge badge-dealer">D</span>
+                    <span class="badge badge-sb">SB</span>
+                    <span class="badge badge-bb">BB</span>
+                </div>
+                <div class="player-top">
+                    <img class="player-avatar" src="../../images/players/man3.svg" alt="Charlie's avatar" />
+                    <div class="player-cards">
+                        <img class="hole-card" src="" alt="" />
+                        <img class="hole-card" src="" alt="" />
+                    </div>
+                </div>
+                <div class="player-info">
+                    <div class="player-name">Charlie</div>
+                    <div class="player-chips">$5,000</div>
+                    <div class="player-action"></div>
+                    <div class="player-hand-result"></div>
+                </div>
+            </div>
+
+            <!-- ── Seat 3 — Top-centre ── -->
+            <div class="player-seat" id="seat-3">
+                <div class="player-badges">
+                    <span class="badge badge-dealer">D</span>
+                    <span class="badge badge-sb">SB</span>
+                    <span class="badge badge-bb">BB</span>
+                </div>
+                <div class="player-top">
+                    <img class="player-avatar" src="../../images/players/man4.svg" alt="Diana's avatar" />
+                    <div class="player-cards">
+                        <img class="hole-card" src="" alt="" />
+                        <img class="hole-card" src="" alt="" />
+                    </div>
+                </div>
+                <div class="player-info">
+                    <div class="player-name">Diana</div>
+                    <div class="player-chips">$5,000</div>
+                    <div class="player-action"></div>
+                    <div class="player-hand-result"></div>
+                </div>
+            </div>
+
+            <!-- ── Seat 4 — Right ── -->
+            <div class="player-seat" id="seat-4">
+                <div class="player-badges">
+                    <span class="badge badge-dealer">D</span>
+                    <span class="badge badge-sb">SB</span>
+                    <span class="badge badge-bb">BB</span>
+                </div>
+                <div class="player-top">
+                    <img class="player-avatar" src="../../images/players/man1.svg" alt="Eve's avatar" />
+                    <div class="player-cards">
+                        <img class="hole-card" src="" alt="" />
+                        <img class="hole-card" src="" alt="" />
+                    </div>
+                </div>
+                <div class="player-info">
+                    <div class="player-name">Eve</div>
+                    <div class="player-chips">$5,000</div>
+                    <div class="player-action"></div>
+                    <div class="player-hand-result"></div>
+                </div>
+            </div>
+
+            <!-- ── Seat 5 — Bottom-right ── -->
+            <div class="player-seat" id="seat-5">
+                <div class="player-badges">
+                    <span class="badge badge-dealer">D</span>
+                    <span class="badge badge-sb">SB</span>
+                    <span class="badge badge-bb">BB</span>
+                </div>
+                <div class="player-top">
+                    <img class="player-avatar" src="../../images/players/man2.svg" alt="Frank's avatar" />
+                    <div class="player-cards">
+                        <img class="hole-card" src="" alt="" />
+                        <img class="hole-card" src="" alt="" />
+                    </div>
+                </div>
+                <div class="player-info">
+                    <div class="player-name">Frank</div>
+                    <div class="player-chips">$5,000</div>
+                    <div class="player-action"></div>
+                    <div class="player-hand-result"></div>
+                </div>
+            </div>
+
+            <!-- ── Board: community cards + pot ── -->
+            <div id="board">
+                <div id="stage-label"></div>
+
+                <div id="community-cards">
+                    <div class="cc-slot" id="cc-0">
+                        <img class="community-card-img card-back" src="" alt="Community Card 1" />
+                        <span class="cc-label">FLOP</span>
+                    </div>
+                    <div class="cc-slot" id="cc-1">
+                        <img class="community-card-img card-back" src="" alt="Community Card 2" />
+                        <span class="cc-label"></span>
+                    </div>
+                    <div class="cc-slot" id="cc-2">
+                        <img class="community-card-img card-back" src="" alt="Community Card 3" />
+                        <span class="cc-label"></span>
+                    </div>
+                    <div class="cc-slot" id="cc-3">
+                        <img class="community-card-img card-back" src="" alt="Community Card 4" />
+                        <span class="cc-label">TURN</span>
+                    </div>
+                    <div class="cc-slot" id="cc-4">
+                        <img class="community-card-img card-back" src="" alt="Community Card 5" />
+                        <span class="cc-label">RIVER</span>
+                    </div>
+                </div>
+
+                <div id="pot-display">
+                    <span class="pot-label">POT</span>
+                    <span id="pot-amount">$0</span>
+                </div>
+            </div>
+
+        </div><!-- #poker-table -->
+    </div><!-- #table-wrapper -->
+
+    <!-- ===== Controls ===== -->
+    <div id="controls">
+        <button id="btn-new-hand"   class="btn btn-primary">New Hand</button>
+        <button id="btn-flop"       class="btn"     disabled>Deal Flop</button>
+        <button id="btn-turn"       class="btn"     disabled>Deal Turn</button>
+        <button id="btn-river"      class="btn"     disabled>Deal River</button>
+        <button id="btn-showdown"   class="btn btn-gold" disabled>Showdown</button>
+        <button id="btn-run-it-out" class="btn btn-info" style="display:none">Run It Out</button>
+    </div>
+
+    <!-- ===== Status bar ===== -->
+    <div id="status-bar">
+        <span id="status-message">Welcome to Poker HUD! Click "New Hand" to begin.</span>
+    </div>
+
+</div><!-- #hud-container -->
+
+<script src="hud.js"></script>
+</body>
 </html>
