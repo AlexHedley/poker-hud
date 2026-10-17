@@ -1,0 +1,433 @@
+/* ================================================================
+   Poker HUD — hud.css
+   ================================================================ */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #0d1117;
+    color: #e0e0e0;
+    font-family: 'Roboto Mono', 'Courier New', monospace;
+    min-height: 100vh;
+}
+
+/* ===== Page container ===== */
+#hud-container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 12px 10px;
+}
+
+/* ===== Header ===== */
+#hud-header {
+    text-align: center;
+    margin-bottom: 12px;
+}
+
+#hud-header h1 {
+    font-family: 'Rye', Georgia, serif;
+    font-size: 2rem;
+    color: #ffd700;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+    letter-spacing: 2px;
+}
+
+#game-info {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 6px;
+    font-size: 0.82rem;
+    color: #9e9e9e;
+}
+
+#game-info strong { color: #ffd700; }
+#hand-number      { color: #64b5f6; }
+
+/* ===== Table wrapper (horizontal scroll on small screens) ===== */
+#table-wrapper {
+    overflow-x: auto;
+    padding: 8px 0;
+}
+
+/* ===== Poker table ===== */
+#poker-table {
+    position: relative;
+    width:  880px;
+    height: 480px;
+    margin: 0 auto;
+
+    /* Felt gradient */
+    background: radial-gradient(ellipse at center,
+        #2a6e2a 0%, #1d5c1d 55%, #124012 100%);
+
+    /* Wooden rail */
+    border:        14px solid #5a3820;
+    border-radius: 50%;
+    box-shadow:
+        0 0 0 5px #7a5030,
+        0 0 0 9px #3d2210,
+        0 25px 70px rgba(0, 0, 0, 0.85);
+}
+
+/* ===== Player Seats ===== */
+.player-seat {
+    position: absolute;
+    width:      158px;
+    background: rgba(0, 0, 0, 0.78);
+    border:     2px solid #3a5c35;
+    border-radius: 8px;
+    padding:    6px 7px 5px;
+    transition: opacity 0.35s, border-color 0.35s, box-shadow 0.35s;
+}
+
+/* Six seats evenly distributed around the oval */
+#seat-0 { left: 361px; top: 353px; }   /* bottom-centre  (hero) */
+#seat-1 { left:  42px; top: 283px; }   /* bottom-left           */
+#seat-2 { left:  18px; top: 100px; }   /* left                  */
+#seat-3 { left: 328px; top:  16px; }   /* top-centre            */
+#seat-4 { left: 660px; top: 100px; }   /* right                 */
+#seat-5 { left: 682px; top: 283px; }   /* bottom-right          */
+
+/* Hero label */
+#seat-0 {
+    border-color: #5aaa3a;
+    background:   rgba(0, 20, 0, 0.88);
+}
+#seat-0::before {
+    content:    'YOU';
+    position:   absolute;
+    top:        -18px;
+    left:       50%;
+    transform:  translateX(-50%);
+    font-size:  9px;
+    color:      #5aaa3a;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+/* Folded player */
+.player-seat.folded {
+    opacity: 0.38;
+    border-color: #555;
+}
+.player-seat.folded .player-name {
+    text-decoration: line-through;
+    color: #888;
+}
+.player-seat.folded .player-avatar {
+    filter: grayscale(100%);
+}
+
+/* Winner highlight */
+.player-seat.winner-seat {
+    border-color: #ffd700;
+    box-shadow: 0 0 18px 4px rgba(255, 215, 0, 0.55);
+    animation: seatPulse 1.4s ease-in-out infinite;
+}
+
+@keyframes seatPulse {
+    0%, 100% { box-shadow: 0 0 18px 4px rgba(255, 215, 0, 0.55); }
+    50%       { box-shadow: 0 0 32px 8px rgba(255, 215, 0, 0.85); }
+}
+
+/* ===== Badges (Dealer / SB / BB) ===== */
+.player-badges {
+    position: absolute;
+    top:  -14px;
+    left: 6px;
+    display: flex;
+    gap: 3px;
+    z-index: 10;
+}
+
+.badge {
+    display:       none;
+    font-size:     10px;
+    font-weight:   bold;
+    padding:       2px 5px;
+    border-radius: 3px;
+    line-height:   1.2;
+}
+
+.badge-dealer { background: #fff;    color: #000; border: 1px solid #ccc; }
+.badge-sb     { background: #1565c0; color: #fff; }
+.badge-bb     { background: #b71c1c; color: #fff; }
+
+/* ===== Player top row (avatar + cards) ===== */
+.player-top {
+    display: flex;
+    align-items: flex-start;
+    gap: 5px;
+    margin-bottom: 5px;
+}
+
+.player-avatar {
+    width:         34px;
+    height:        34px;
+    border-radius: 50%;
+    border:        2px solid #3a5c35;
+    flex-shrink:   0;
+    object-fit:    cover;
+}
+
+/* ===== Hole cards ===== */
+.player-cards {
+    display: flex;
+    gap: 3px;
+}
+
+.hole-card {
+    width:         40px;
+    height:        56px;
+    border-radius: 4px;
+    border:        1px solid #444;
+    object-fit:    cover;
+    transition:    transform 0.2s;
+}
+.hole-card:hover { transform: translateY(-4px) scale(1.05); }
+
+/* ===== Community cards (face-back) ===== */
+.hole-card.card-back,
+.community-card-img.card-back {
+    border-color: #3949ab;
+}
+
+/* ===== Winning card animation ===== */
+@keyframes winnerCardGlow {
+    0%, 100% {
+        box-shadow: 0 0 8px 3px #ffd700;
+        transform:  scale(1);
+    }
+    50% {
+        box-shadow: 0 0 24px 8px rgba(255, 215, 0, 0.7),
+                    0 0 48px 16px rgba(255, 215, 0, 0.3);
+        transform:  scale(1.12) translateY(-4px);
+    }
+}
+
+.hole-card.winning-card,
+.community-card-img.winning-card {
+    animation:    winnerCardGlow 1s ease-in-out infinite;
+    border:       2px solid #ffd700;
+    position:     relative;
+    z-index:      20;
+}
+
+/* ===== Card deal animation ===== */
+@keyframes cardDealIn {
+    from { opacity: 0; transform: scale(0.5) rotate(-8deg); }
+    to   { opacity: 1; transform: scale(1) rotate(0deg);    }
+}
+
+.card-deal-anim {
+    animation: cardDealIn 0.3s ease-out forwards;
+}
+
+/* ===== Player info ===== */
+.player-info { font-size: 10px; }
+
+.player-name {
+    font-size:   12px;
+    font-weight: bold;
+    color:       #e0e0e0;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+    overflow:    hidden;
+    text-overflow: ellipsis;
+}
+
+.player-chips {
+    color:       #ffd700;
+    font-size:   11px;
+    font-weight: bold;
+    margin:      2px 0;
+}
+
+.player-action {
+    font-size:   10px;
+    font-weight: bold;
+    padding:     1px 4px;
+    border-radius: 2px;
+    min-height:  15px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.action-fold  { color: #ef5350; }
+.action-call  { color: #66bb6a; background: rgba(102, 187, 106, 0.12); }
+.action-check { color: #42a5f5; background: rgba(66,  165, 245, 0.12); }
+.action-raise { color: #ffa726; background: rgba(255, 167,  38, 0.12); }
+
+.player-hand-result {
+    font-size:   9px;
+    color:       #ffd700;
+    font-weight: bold;
+    white-space: nowrap;
+    overflow:    hidden;
+    text-overflow: ellipsis;
+    min-height:  13px;
+}
+
+/* ===== Board (community cards + pot — centred on table) ===== */
+#board {
+    position:   absolute;
+    left:       50%;
+    top:        50%;
+    transform:  translate(-50%, -50%);
+    display:    flex;
+    flex-direction: column;
+    align-items: center;
+    gap:        7px;
+    z-index:    5;
+}
+
+#stage-label {
+    font-family:    'Rye', Georgia, serif;
+    font-size:      11px;
+    color:          rgba(255, 215, 0, 0.65);
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    height:         16px;
+    text-align:     center;
+}
+
+/* ===== Community card slots ===== */
+#community-cards {
+    display:    flex;
+    gap:        5px;
+    align-items: flex-end;
+}
+
+.cc-slot {
+    display:        flex;
+    flex-direction: column;
+    align-items:    center;
+    gap:            3px;
+}
+
+.community-card-img {
+    width:        52px;
+    height:       73px;
+    border-radius: 5px;
+    border:       2px solid #555;
+    object-fit:   cover;
+    transition:   transform 0.25s;
+}
+.community-card-img:not(.card-back):hover {
+    transform: translateY(-4px) scale(1.06);
+}
+
+.cc-label {
+    font-size:  7px;
+    color:      rgba(255, 215, 0, 0.45);
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    height:     10px;
+}
+
+/* ===== Pot display ===== */
+#pot-display {
+    display:        flex;
+    align-items:    center;
+    gap:            8px;
+    background:     rgba(0, 0, 0, 0.65);
+    border:         1px solid #3a5c35;
+    border-radius:  24px;
+    padding:        4px 16px;
+}
+
+.pot-label {
+    font-size:      10px;
+    color:          #9e9e9e;
+    font-weight:    bold;
+    letter-spacing: 2px;
+}
+
+#pot-amount {
+    font-size:   18px;
+    font-weight: bold;
+    color:       #ffd700;
+    letter-spacing: 1px;
+}
+
+/* ===== Controls ===== */
+#controls {
+    display:         flex;
+    justify-content: center;
+    flex-wrap:       wrap;
+    gap:             10px;
+    margin:          16px 0 8px;
+    padding:         0 10px;
+}
+
+.btn {
+    padding:       8px 20px;
+    font-family:   'Roboto Mono', monospace;
+    font-size:     12px;
+    font-weight:   bold;
+    border:        2px solid #555;
+    border-radius: 5px;
+    cursor:        pointer;
+    transition:    all 0.2s ease;
+    background:    #1e1e2e;
+    color:         #ccc;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.btn:hover:not(:disabled) {
+    transform:  translateY(-2px);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.5);
+}
+
+.btn:disabled {
+    opacity: 0.3;
+    cursor:  not-allowed;
+}
+
+.btn-primary {
+    background:   #1b5e20;
+    border-color: #4caf50;
+    color:        #a5d6a7;
+}
+.btn-primary:hover:not(:disabled) {
+    background: #2e7d32;
+    border-color: #81c784;
+}
+
+.btn-gold {
+    background:   #332500;
+    border-color: #ffd700;
+    color:        #ffd700;
+}
+.btn-gold:hover:not(:disabled) {
+    background:  #4d3800;
+    box-shadow:  0 0 16px rgba(255, 215, 0, 0.45);
+}
+
+.btn-info {
+    background:   #01579b;
+    border-color: #29b6f6;
+    color:        #b3e5fc;
+}
+
+/* ===== Status bar ===== */
+#status-bar {
+    text-align:    center;
+    padding:       8px;
+    background:    rgba(0, 0, 0, 0.35);
+    border-radius: 5px;
+    margin-top:    6px;
+}
+
+#status-message {
+    font-size: 13px;
+    color:     #b0bec5;
+}
