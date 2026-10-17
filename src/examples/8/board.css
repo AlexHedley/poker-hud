@@ -1,0 +1,104 @@
+:root {
+    color-scheme: light;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #f4f5f1;
+    background: #deded9;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 24px;
+    background: #deded9;
+}
+
+h1 {
+    margin: 0 auto 18px;
+    max-width: 620px;
+    color: #20251f;
+    font-size: 24px;
+}
+
+.hud8 {
+    width: min(100%, 620px);
+    margin: 0 auto;
+    padding: 12px;
+    background: #202520;
+    border: 1px solid #485248;
+    border-radius: 10px;
+    box-shadow: 0 8px 24px rgb(0 0 0 / 18%);
+}
+
+.hud8-board {
+    padding: 14px;
+    background: radial-gradient(ellipse at center, #267044 0%, #155431 65%, #103c25 100%);
+    border: 5px solid #5a3823;
+    border-radius: 44% / 30%;
+    box-shadow: inset 0 0 0 2px #b58b4e, 0 2px 4px #101510;
+}
+
+.hud8-board-header,
+.hud8-table-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    color: #e6d3a4;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+}
+
+.hud8-board-header {
+    padding: 0 10px 10px;
+}
+
+.hud8-community {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 7px;
+    min-height: 99px;
+}
+
+.hud8-community img {
+    display: block;
+    width: clamp(42px, 12vw, 58px);
+    height: auto;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgb(0 0 0 / 35%);
+}
+
+.hud8-card-placeholder {
+    width: clamp(42px, 12vw, 58px);
+    aspect-ratio: 5 / 7;
+    border: 1px dashed rgb(255 255 255 / 28%);
+    border-radius: 4px;
+}
+
+.hud8-table-footer {
+    padding: 10px 10px 0;
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 16px 10px;
+    }
+
+    .hud8 {
+        padding: 8px;
+    }
+
+    .hud8-board {
+        padding: 10px 5px;
+        border-width: 4px;
+    }
+
+    .hud8-board-header,
+    .hud8-table-footer {
+        font-size: 9px;
+    }
+}
