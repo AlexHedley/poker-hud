@@ -1,0 +1,117 @@
+.hud8-players {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    margin-top: 12px;
+}
+
+.hud8-player {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 9px;
+    min-width: 0;
+    padding: 10px;
+    background: #343b36;
+    border: 1px solid #566157;
+    border-radius: 7px;
+}
+
+.hud8-player-cards {
+    display: flex;
+    gap: 3px;
+}
+
+.hud8-player-cards img {
+    display: block;
+    width: 35px;
+    height: auto;
+    border-radius: 3px;
+}
+
+.hud8-player-details {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    min-width: 0;
+}
+
+.hud8-player-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px;
+}
+
+.hud8-player-heading h2 {
+    overflow: hidden;
+    margin: 0;
+    color: #fff;
+    font-size: 12px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.hud8-position {
+    flex: 0 0 auto;
+    padding: 2px 4px;
+    color: #242a25;
+    background: #e8c76f;
+    border-radius: 3px;
+    font-size: 9px;
+    font-weight: 700;
+}
+
+.hud8-action {
+    overflow: hidden;
+    color: #86d99b;
+    font-size: 10px;
+    font-weight: 700;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.hud8-action-check {
+    color: #d9d9cf;
+}
+
+.hud8-stack {
+    color: #c3c9c2;
+    font-size: 10px;
+    white-space: nowrap;
+}
+
+.hud8-stack strong {
+    color: #fff;
+}
+
+.hud8-stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+    padding-left: 8px;
+    border-left: 1px solid #596159;
+}
+
+.hud8-stat strong {
+    color: #f1d071;
+    font-size: 16px;
+}
+
+.hud8-stat span {
+    color: #c3c9c2;
+    font-size: 9px;
+    font-weight: 700;
+}
+
+@media (max-width: 480px) {
+    .hud8-players {
+        grid-template-columns: 1fr;
+        gap: 7px;
+    }
+
+    .hud8-player {
+        padding: 8px;
+    }
+}

@@ -12,25 +12,87 @@
         <title>Poker HUD - 8</title>
     </head>
 
-    <body style="background-color: lightgray;">
+    <body>
         <h1>Poker HUD - 8</h1>
 
-        <h2>Board</h2>
-        <img src="../../images/examples/Board_8.png" alt="HUD 8 board" />
-        <img src="../../images/examples/Board_8.1.png" alt="HUD 8 board variation 1" />
-        <img src="../../images/examples/Board_8.2.png" alt="HUD 8 board variation 2" />
-        <img src="../../images/examples/Board_8.3.png" alt="HUD 8 board variation 3" />
+        <main class="hud8">
+            <section class="hud8-board" aria-label="Community board">
+                <div class="hud8-board-header">
+                    <span>NO-LIMIT HOLD'EM</span>
+                    <span>BLINDS $25 / $50</span>
+                </div>
 
-        <hr />
+                <div class="hud8-community">
+                    <img src="../../images/cards/12-spade.png" alt="Queen of spades" />
+                    <img src="../../images/cards/4-spade.png" alt="Four of spades" />
+                    <img src="../../images/cards/4-diamond.png" alt="Four of diamonds" />
+                    <span class="hud8-card-placeholder" aria-hidden="true"></span>
+                    <span class="hud8-card-placeholder" aria-hidden="true"></span>
+                </div>
 
-        <h2>Player</h2>
-        <img src="../../images/examples/Players_8.png" alt="HUD 8 player display" />
-        <img src="../../images/examples/Players_8.1.png" alt="HUD 8 player display variation 1" />
+                <div class="hud8-table-footer">
+                    <span>FLOP</span>
+                    <span class="hud8-pot-label">POT <strong>$12,450</strong></span>
+                    <span>HAND #184</span>
+                </div>
+            </section>
 
-        <hr />
+            <section class="hud8-players" aria-label="Players">
+                <article class="hud8-player">
+                    <div class="hud8-player-cards" aria-label="Player's hole cards">
+                        <img src="../../images/cards/14-heart.png" alt="Ace of hearts" />
+                        <img src="../../images/cards/14-club.png" alt="Ace of clubs" />
+                    </div>
+                    <div class="hud8-player-details">
+                        <div class="hud8-player-heading">
+                            <h2>PLAYER 1</h2>
+                            <span class="hud8-position">BTN</span>
+                        </div>
+                        <span class="hud8-action">RAISE $1,200</span>
+                        <span class="hud8-stack">Stack <strong>$18,650</strong></span>
+                    </div>
+                    <div class="hud8-stat">
+                        <strong>28%</strong>
+                        <span>VPIP</span>
+                    </div>
+                </article>
 
-        <h2>Pot</h2>
-        <img src="../../images/examples/Pot_8.png" alt="HUD 8 pot display" />
+                <article class="hud8-player">
+                    <div class="hud8-player-cards" aria-label="Player's hole cards">
+                        <img src="../../images/cards/13-heart.png" alt="King of hearts" />
+                        <img src="../../images/cards/13-club.png" alt="King of clubs" />
+                    </div>
+                    <div class="hud8-player-details">
+                        <div class="hud8-player-heading">
+                            <h2>PLAYER 2</h2>
+                            <span class="hud8-position">BB</span>
+                        </div>
+                        <span class="hud8-action hud8-action-check">CHECK</span>
+                        <span class="hud8-stack">Stack <strong>$9,800</strong></span>
+                    </div>
+                    <div class="hud8-stat">
+                        <strong>19%</strong>
+                        <span>VPIP</span>
+                    </div>
+                </article>
+            </section>
+        </main>
+
+        <details class="hud8-references">
+            <summary>HUD 8 design references</summary>
+            <h2>Board</h2>
+            <img src="../../images/examples/Board_8.png" alt="Original HUD 8 board reference" />
+            <img src="../../images/examples/Board_8.1.png" alt="HUD 8 board reference variation 1" />
+            <img src="../../images/examples/Board_8.2.png" alt="HUD 8 board reference variation 2" />
+            <img src="../../images/examples/Board_8.3.png" alt="HUD 8 board reference variation 3" />
+
+            <h2>Player</h2>
+            <img src="../../images/examples/Players_8.png" alt="Original HUD 8 player reference" />
+            <img src="../../images/examples/Players_8.1.png" alt="HUD 8 player reference variation 1" />
+
+            <h2>Pot</h2>
+            <img src="../../images/examples/Pot_8.png" alt="Original HUD 8 pot reference" />
+        </details>
 
     </body>
 </html>
