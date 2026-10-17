@@ -1,0 +1,99 @@
+/* ------ */
+/* Player */
+/* ------ */
+
+.player-hud {
+    display: inline-grid;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+        "photo  cards   name    pot-odds"
+        "flag   cards   action  stack";
+    gap: 2px;
+    background-color: #1a1a2e;
+    border: 2px solid #c9a84c;
+    border-radius: 6px;
+    padding: 5px 8px;
+    min-width: 200px;
+}
+
+.player-hud .photo {
+    grid-area: photo;
+    width: 36px;
+    height: 36px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 1px solid #c9a84c;
+    align-self: center;
+    margin-right: 4px;
+}
+
+.player-hud .flag {
+    grid-area: flag;
+    height: 14px;
+    width: auto;
+    align-self: center;
+    margin-right: 4px;
+    border: 1px solid #555;
+}
+
+.player-hud .cards {
+    grid-area: cards;
+    display: flex;
+    gap: 2px;
+    align-items: center;
+    padding-right: 8px;
+}
+
+.player-hud .card {
+    width: 38px;
+    border-radius: 3px;
+}
+
+.player-hud .name {
+    grid-area: name;
+    background-color: #c9a84c;
+    color: #1a1a1a;
+    font-weight: bold;
+    font-size: 13px;
+    text-transform: uppercase;
+    text-align: center;
+    border-radius: 3px;
+    padding: 1px 8px;
+    letter-spacing: 0.5px;
+}
+
+.player-hud .pot-odds {
+    grid-area: pot-odds;
+    background-color: #16213e;
+    color: #e0e0e0;
+    font-size: 11px;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 3px;
+    border: 1px solid #c9a84c;
+    padding: 1px 4px;
+}
+
+.player-hud .action {
+    grid-area: action;
+    background-color: #0f3460;
+    color: #ffffff;
+    font-size: 11px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 3px;
+    padding: 1px 8px;
+    text-align: center;
+}
+
+.player-hud .stack {
+    grid-area: stack;
+    background-color: #16213e;
+    color: #c9a84c;
+    font-size: 11px;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 3px;
+    padding: 1px 4px;
+}

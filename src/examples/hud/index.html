@@ -9,14 +9,54 @@
         <link rel="stylesheet" href="player.css" />
         <link rel="stylesheet" href="pot.css" />
 
-        <title>Poker HUD</title>
+        <title>Poker HUD - HUD 1</title>
     </head>
 
     <body style="background-color: lightgray;">
-        <h1>Poker HUD</h1>
+        <h1>Poker HUD - HUD 1</h1>
 
-        <p>Try out the examples here:</p>
-        <p>TODO</p>
+        <h2>Board</h2>
+
+        <div class="board-hud">
+            <div class="cards">
+                <img src="../../images/cards/12-club.png" alt="Flop One" class="card" />
+                <img src="../../images/cards/9-club.png" alt="Flop Two" class="card" />
+                <img src="../../images/cards/13-diamond.png" alt="Flop Three" class="card" />
+                <img src="../../images/cards/4-heart.png" alt="Turn" class="card" />
+                <img src="../../images/cards/13-club.png" alt="River" class="card" />
+            </div>
+            <div class="street-labels">
+                <div class="label flop">Flop</div>
+                <div class="label turn">Turn</div>
+                <div class="label river">River</div>
+            </div>
+        </div>
+
+        <hr />
+
+        <h2>Player</h2>
+
+        <div class="player-hud">
+            <img src="../../images/players/man1.svg" alt="Player Photo" class="photo" />
+            <img src="../../images/flags/uk.jpg" alt="Flag" class="flag" />
+            <div class="cards">
+                <img src="../../images/cards/12-spade.png" alt="Card 1" class="card" />
+                <img src="../../images/cards/11-spade.png" alt="Card 2" class="card" />
+            </div>
+            <div class="name">Gareth</div>
+            <div class="pot-odds">77%</div>
+            <div class="action">Raise 20k</div>
+            <div class="stack">869k</div>
+        </div>
+
+        <hr />
+
+        <h2>Pot</h2>
+
+        <div class="pot-hud">
+            <span class="pot-label">Pot</span>
+            <span class="pot-amount">292,000</span>
+        </div>
 
     </body>
 </html>
