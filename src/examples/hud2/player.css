@@ -1,0 +1,78 @@
+/* ------- */
+/* Player  */
+/* ------- */
+
+.player-card {
+    width: 35px;
+}
+
+.players-container {
+    display: flex;
+    flex-direction: column;
+    background-color: #111111;
+    width: fit-content;
+    gap: 2px;
+}
+
+.player-row {
+    display: flex;
+    align-items: stretch;
+    background-color: #1a1a1a;
+}
+
+.player-cards {
+    display: flex;
+    gap: 2px;
+    padding: 4px;
+    background-color: #0a0a0a;
+    align-items: center;
+}
+
+.player-details {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.player-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3px 8px;
+    background-color: #1a1a1a;
+    flex: 1;
+}
+
+.player-name {
+    color: white;
+    font-weight: bold;
+    font-size: 12px;
+    font-family: Arial, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.player-odds {
+    color: #aaaaaa;
+    font-size: 11px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+}
+
+.player-action {
+    padding: 3px 8px;
+    font-weight: bold;
+    font-size: 11px;
+    font-family: Arial, sans-serif;
+    text-transform: uppercase;
+}
+
+.player-action.call {
+    background-color: #1a3a5c;
+    color: #88aadd;
+}
+
+.player-action.all-in {
+    background-color: #3a1a1a;
+    color: #dd8888;
+}

@@ -1,0 +1,44 @@
+/* ------ */
+/* Board  */
+/* ------ */
+
+.board-card {
+    width: 30px;
+}
+
+.board-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: auto auto;
+    gap: 2px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "f1 f2 f3 t r"
+        "flop flop flop turn river";
+    width: fit-content;
+    background-color: #111111;
+    padding: 4px;
+}
+
+.f1 { grid-area: f1; text-align: center; }
+.f2 { grid-area: f2; text-align: center; }
+.f3 { grid-area: f3; text-align: center; }
+.t  { grid-area: t;  text-align: center; }
+.r  { grid-area: r;  text-align: center; }
+
+.flop  { grid-area: flop; }
+.turn  { grid-area: turn; }
+.river { grid-area: river; }
+
+.info {
+    color: #cccccc;
+    background-color: #222222;
+    border: 1px solid #444444;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 10px;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    padding: 2px 0;
+    letter-spacing: 0.5px;
+}
