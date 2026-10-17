@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="description" content="Poker HUD 1" />
+        <meta name="description" content="Poker HUD 7" />
 
         <link rel="stylesheet" href="board.css" />
         <link rel="stylesheet" href="player.css" />
@@ -18,21 +18,72 @@
         <h2>Board</h2>
         <img src="../../images/examples/Board_7.jpeg" alt="Board 7" />
 
-        
+        <div class="hud7-board">
+            <div class="hud7-seat">
+                <div class="hud7-hole-cards">
+                    <img src="../../images/cards/13-club.png" alt="King of clubs" />
+                    <img src="../../images/cards/9-club.png" alt="Nine of clubs" />
+                </div>
+                <div class="hud7-name">Traudt</div>
+                <div class="hud7-action">Win</div>
+            </div>
+            <div class="hud7-seat">
+                <div class="hud7-hole-cards">
+                    <img src="../../images/cards/7-spade.png" alt="Seven of spades" />
+                    <img src="../../images/cards/4-spade.png" alt="Four of spades" />
+                </div>
+                <div class="hud7-name">Negreanu</div>
+                <div class="hud7-action">Fold</div>
+            </div>
+        </div>
 
         <hr />
 
         <h2>Player</h2>
         <img src="../../images/examples/Players_7.jpeg" alt="Players 7" />
 
-        
+        <div class="hud7-players">
+            <div class="hud7-player">
+                <img class="hud7-avatar" src="../../images/players/man1.svg" alt="" />
+                <div class="hud7-player-info">
+                    <div class="hud7-player-name">Traudt</div>
+                    <div class="hud7-stats">
+                        <span>VPIP <b>34%</b></span>
+                        <span>PFR <b>22%</b></span>
+                        <span>Hands <b>125</b></span>
+                    </div>
+                </div>
+                <div class="hud7-player-cards">
+                    <img src="../../images/cards/13-club.png" alt="King of clubs" />
+                    <img src="../../images/cards/9-club.png" alt="Nine of clubs" />
+                </div>
+            </div>
+            <div class="hud7-player">
+                <img class="hud7-avatar" src="../../images/players/man2.svg" alt="" />
+                <div class="hud7-player-info">
+                    <div class="hud7-player-name">Negreanu</div>
+                    <div class="hud7-stats">
+                        <span>VPIP <b>28%</b></span>
+                        <span>PFR <b>19%</b></span>
+                        <span>Hands <b>210</b></span>
+                    </div>
+                </div>
+                <div class="hud7-player-cards">
+                    <img src="../../images/cards/7-spade.png" alt="Seven of spades" />
+                    <img src="../../images/cards/4-spade.png" alt="Four of spades" />
+                </div>
+            </div>
+        </div>
 
         <hr />
 
         <h2>Pot</h2>
         <img src="../../images/examples/Pot_7.jpeg" alt="Pot 7" />
 
-        
+        <div class="hud7-pot">
+            <span class="hud7-pot-label">Pot</span>
+            <span class="hud7-pot-amount">$7,400</span>
+        </div>
 
     </body>
 </html>
