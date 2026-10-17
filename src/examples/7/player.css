@@ -1,0 +1,62 @@
+.hud7-players {
+    display: grid;
+    gap: 8px;
+    width: fit-content;
+}
+
+.hud7-player {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    min-width: 310px;
+    padding: 6px;
+    border: 1px solid #d4b44c;
+    border-radius: 5px;
+    background: #171717;
+    color: white;
+}
+
+.hud7-avatar {
+    width: 52px;
+    height: 52px;
+    border-radius: 4px;
+    object-fit: cover;
+}
+
+.hud7-player-info {
+    flex: 1;
+}
+
+.hud7-player-name {
+    margin-bottom: 4px;
+    color: #f1ca31;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.hud7-stats {
+    display: flex;
+    gap: 8px;
+    font-size: 11px;
+}
+
+.hud7-stats span {
+    display: grid;
+    gap: 2px;
+    color: #bbb;
+}
+
+.hud7-stats b {
+    color: white;
+    font-size: 12px;
+}
+
+.hud7-player-cards {
+    display: flex;
+    gap: 2px;
+}
+
+.hud7-player-cards img {
+    height: 38px;
+    width: auto;
+}

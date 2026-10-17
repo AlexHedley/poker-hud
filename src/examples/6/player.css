@@ -1,0 +1,63 @@
+.players_6 {
+    width: fit-content;
+    border: 1px solid #666;
+    background-color: #d9d9d9;
+}
+
+.player_6 {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: 36px 13px 14px;
+    grid-template-areas:
+        "cards odds"
+        "name name"
+        "action action";
+    width: 114px;
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+}
+
+.player_6 + .player_6 {
+    border-top: 1px solid #666;
+}
+
+.player-cards {
+    grid-area: cards;
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+
+.player-cards img {
+    height: 32px;
+    width: auto;
+}
+
+.player_6 .pot-odds {
+    grid-area: odds;
+    align-self: center;
+    font-weight: bold;
+    padding-right: 3px;
+}
+
+.player-name,
+.player-action {
+    padding: 1px 4px;
+    font-weight: bold;
+}
+
+.player-name {
+    grid-area: name;
+    color: white;
+    background-color: #333;
+}
+
+.player-action {
+    grid-area: action;
+    color: white;
+    background-color: #111;
+}
+
+.player-action.all-in {
+    background-color: #a40000;
+}

@@ -1,0 +1,53 @@
+.hud7-board {
+    display: grid;
+    gap: 8px;
+    width: 225px;
+    padding: 5px;
+    background: #451a12;
+    border: 1px solid #d4b44c;
+    border-radius: 4px;
+}
+
+.hud7-seat {
+    display: grid;
+    grid-template-columns: 1fr 52px;
+    grid-template-rows: 52px 27px 25px;
+    overflow: hidden;
+    border: 1px solid #d4b44c;
+    border-radius: 4px;
+    background: #101014;
+}
+
+.hud7-hole-cards {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    height: 52px;
+}
+
+.hud7-hole-cards img {
+    height: 50px;
+    width: auto;
+}
+
+.hud7-name {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(#fff59a, #eebd00);
+    color: #171717;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.hud7-action {
+    grid-column: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 2px solid #d4b44c;
+    background: linear-gradient(#444, #141414);
+    color: #eee;
+    font-size: 18px;
+}

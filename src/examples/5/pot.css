@@ -1,0 +1,27 @@
+/* ----- ----- */
+/*   Pot 5     */
+/* ----- ----- */
+
+.pot_5 {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    border-radius: 15px;
+    border: 2px solid gold;
+    background-color: brown;
+
+    padding: 4px 14px;
+    width: fit-content;
+
+    font-weight: bold;
+}
+
+.pot_5 .pot-label {
+    color: gold;
+    text-transform: uppercase;
+}
+
+.pot_5 .pot-amount {
+    color: white;
+}

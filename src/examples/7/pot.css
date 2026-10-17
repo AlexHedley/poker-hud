@@ -1,0 +1,21 @@
+.hud7-pot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 250px;
+    padding: 8px 12px;
+    border: 1px solid #d4b44c;
+    border-radius: 4px;
+    background: linear-gradient(#333, #111);
+    color: white;
+    font-weight: bold;
+}
+
+.hud7-pot-label {
+    color: #f1ca31;
+    text-transform: uppercase;
+}
+
+.hud7-pot-amount {
+    font-size: 20px;
+}
