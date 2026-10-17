@@ -1,0 +1,46 @@
+/* ----- ----- */
+/*  Player 5   */
+/* ----- ----- */
+
+.player_5 {
+    width: fit-content;
+    border-radius: 15px;
+    border: 2px solid gold;
+    background-color: #1a1a2e;
+    overflow: hidden;
+    padding: 4px 8px;
+}
+
+.player_5 .player-row {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 3px 0;
+}
+
+.player_5 .player-row + .player-row {
+    border-top: 1px solid gold;
+}
+
+.player_5 .Card-1,
+.player_5 .Card-2 {
+    display: flex;
+    align-items: center;
+}
+
+.player_5 .Name {
+    color: gold;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 0 4px;
+    min-width: 80px;
+}
+
+.player_5 .Stat {
+    color: white;
+    font-weight: bold;
+    font-size: 13px;
+    padding: 1px 5px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 3px;
+}
